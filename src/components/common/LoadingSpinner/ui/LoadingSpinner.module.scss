@@ -1,0 +1,23 @@
+.loadingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Центрируем по высоте */
+    fill: #006fbe;
+}
+
+.snowflakeIcon {
+    width: 150px; /* Размер снежинки */
+    height: 150px; /* Размер снежинки */
+    animation: spin 3s linear infinite; /* Вращение */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

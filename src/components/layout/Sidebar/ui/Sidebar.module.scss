@@ -1,0 +1,85 @@
+.sidebar {
+    position: fixed;
+    margin-top: 0;
+    left: 0;
+    width: 100px; // Узкая ширина в начале
+    height: 100%;
+    background-color: white;
+    color: #333;
+    transition: width 0.5s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    font-size: var(--font-line-s);
+    z-index: 1000;
+
+    --accent-color: #087da5;
+    --bg-sidebar-hover: #daf8ff;
+
+    &:hover {
+        width: 250px;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    li {
+        height: 60px;
+        display: flex;
+        align-items: center; /* Центрирование по вертикали */
+        padding-left: 30px;
+        border-radius: 0 10px 10px 0;
+        position: relative;
+
+        .icon {
+            transition: opacity 0.3s;
+            opacity: 1; // Иконки видны по умолчанию
+        }
+
+        .icon_fill {
+            fill: #333;
+        }
+
+        .text {
+            opacity: 0; // Текст скрыт по умолчанию
+            white-space: nowrap;
+            transition: opacity 0.3s;
+            margin-left: 10px; // Отступ от иконки
+        }
+
+        &:hover {
+            background-color: var(--bg-sidebar-hover);
+            border: solid rgb(8 125 165 / 26%) 1px;
+            color: var(--accent-color);
+            height: 58px;
+            padding-left: 29px;
+
+            .icon_fill {
+                fill: var(--accent-color);
+            }
+        }
+    }
+
+    // Стили для ссылок, чтобы текст не менял цвет после нажатия
+    a {
+        text-decoration: none; // Убираем подчеркивание
+        color: inherit; // Наследуем цвет от родителя (li)
+
+        &:visited {
+            color: inherit; // Цвет после посещения остается как у родителя
+        }
+    }
+}
+
+/* Показываем текст и скрываем иконку при ширине 250px */
+.sidebar:hover {
+    width: 250px;
+
+    .text {
+        opacity: 1; // Показать текст
+    }
+}

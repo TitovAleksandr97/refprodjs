@@ -1,0 +1,12 @@
+@import "reset";
+@import "variables/global";
+@import "./themes/normal";
+
+.app {
+    font: var(--font-l);
+    background: var(--bg-color);
+    min-height: 100vh;
+    font-family: var(--font-family-main), serif;
+
+    --primary-color: #006fbe;
+}

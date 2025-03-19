@@ -1,0 +1,83 @@
+.card {
+    position: relative;
+    padding: 20px;
+    background: #f3f3f6;
+    border-radius: 10px;
+    width: 300px;
+    height: 150px;
+    box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
+    transition: box-shadow 0.4s ease;
+    overflow: hidden;
+    z-index: 1;
+
+    .link_full {
+        display: inline;
+        font-size: 0;
+        opacity: 0; // Текст скрыт по умолчанию
+        white-space: nowrap;
+        transition: font-size 0.3s ease-in-out;
+    }
+
+    &:hover {
+        border: none;
+        box-shadow:
+            0 0 10px 1px rgb(65 233 248),
+            5px 5px 10px 3px rgb(0 81 255 / 99%),
+            -5px -5px 10px 3px rgb(65 248 233 / 96%);
+
+        .link_full {
+            opacity: 1; // Текст отображается при наведении
+            font-size: 1rem;
+        }
+    }
+}
+
+.tag {
+    display: inline-block;
+    background: linear-gradient(135deg, rgb(65 233 248 / 30%), rgb(0 81 255 / 30%));
+    color: #333;
+    padding: 1px 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.tag_company {
+    margin-left: 10px;
+    display: inline-block;
+    background: linear-gradient(135deg, #ffe0e0, rgb(0 81 255 / 30%));
+    color: #333;
+    padding: 1px 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 18px;
+    margin: 0 0 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.linked {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline;
+
+    &:hover {
+        color: #0070f3;
+    }
+}

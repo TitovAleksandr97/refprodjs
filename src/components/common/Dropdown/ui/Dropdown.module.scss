@@ -1,0 +1,53 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+
+    .dropdownButton {
+        padding: 10px 20px;
+        cursor: pointer;
+        background-color: white;
+        border: none;
+        width: 100%;
+        text-align: left;
+        display: flex; /* Чтобы кнопка и стрелочка были на одной линии */
+        justify-content: space-between; /* Разделяем кнопку и стрелку */
+        align-items: center; /* Выравниваем по вертикали */
+
+        &:hover {
+            background-color: #b8b8bb;
+            transition: background-color 0.5s ease;
+        }
+
+        &::after {
+            content: "⫸";
+            font-size: 16px;
+            transition: transform 0.4s ease;
+        }
+
+        &.open::after {
+            transform: rotate(90deg);
+        }
+    }
+
+    .dropdownMenu {
+        background-color: white;
+        box-shadow: 0 8px 16px rgb(0 0 0 / 10%);
+        overflow: hidden;
+        height: 0; /* Изначально скрываем */
+        transition: height 0.3s ease;
+        padding: 0;
+        border-radius: 4px;
+    }
+
+    .dropdownItem {
+        padding: 10px 15px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-size: 16px;
+
+        &:hover {
+            background-color: #f1f1f1;
+        }
+    }
+}

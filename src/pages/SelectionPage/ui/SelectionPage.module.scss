@@ -1,0 +1,9 @@
+.container {
+    margin-top: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    flex-wrap: wrap;
+    gap: 40px; /* Расстояние между карточками */
+    justify-content: start; /* Выравнивание карточек по центру */
+    padding: 20px; /* Отступ от краев контейнера */
+}

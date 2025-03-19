@@ -1,0 +1,44 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(123deg, rgb(0 111 190 / 100%), rgb(0 81 255 / 100%));
+    color: #fff;
+    height: 4rem;
+    position: fixed; /* Закрепляет navbar в верхней части экрана */
+    top: 0; /* Задает отступ от верхнего края */
+    left: 0; /* Задает отступ от левого края */
+    width: 100%; /* Делаем navbar на всю ширину экрана */
+    z-index: 1000; /* Позволяет navbar быть поверх других элементов */
+    box-shadow: 0 2px 5px rgb(0 0 0 / 10%); /* Добавляет небольшую тень для отделения navbar от контента */
+}
+
+.navbar_logo {
+    fill: white;
+    width: 150px;
+    height: 100%;
+    margin-left: 30px;
+}
+
+.navbar__logo a {
+    color: #fff;
+}
+
+.navbar__links {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    margin: 15px;
+}
+
+.navbar__links li {
+    margin: 0;
+}
+
+.navbar__links a {
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.navbar__links a:hover {
+    color: #f39c12;
+}

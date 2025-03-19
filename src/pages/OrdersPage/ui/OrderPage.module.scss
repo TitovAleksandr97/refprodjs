@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    flex-wrap: wrap;
+    gap: 40px; /* Расстояние между карточками */
+    justify-content: start; /* Выравнивание карточек по центру */
+    padding: 20px; /* Отступ от краев контейнера */
+}
+
+.searchInput {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 500px;
+    margin-left: 50px; /* Отступ между поисковой строкой и карточками */
+}
+
+.filters {
+    display: inline-block;
+    margin: 20px; /* Отступ между фильтрами и карточками */
+}
+
+.select {
+    margin-left: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.loadMoreButton {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0070f3;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 20px; /* Отступ сверху для кнопок загрузки */
+}
+
+.loadMoreButton:hover {
+    background-color: #005bb5;
+}
